@@ -1,2 +1,3 @@
 # Atcoder_code
-It is written python code.
+ここではAtcoderで使うアルゴリズムのコードをまとめて書いてあります。  
+現在入れているアルゴリズム
