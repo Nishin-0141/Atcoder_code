@@ -16,7 +16,7 @@ while q:
     v = q.popleft() # 現在地
     for dy, dx in d:
         if not (0 <= v[0] + dy <= r - 1 and 0 <= v[1] + dx <= c - 1): continue # (y, x)が範囲外のとき
-        if dist[v[0] + dy][v[1] + dx] != 0: continue # 移動先が壁ならいけない
+        if dist[v[0] + dy][v[1] + dx] != 0: continue # 移動先が壁、もしくは訪問済みなら行かない
         dist[v[0] + dy][v[1] + dx] = dist[v[0]][v[1]] + 1 # 何歩目か更新
         q.append([v[0] + dy, v[1] + dx]) # キューに新しく追加
 
