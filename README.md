@@ -1,7 +1,8 @@
-# Atcoder_code
+# Atcoder_code <img src="https://img.shields.io/badge/-Python-FFFF00.svg?logo=python&style=plastic"> <img src="https://img.shields.io/badge/-Visual%20Studio%20Code-007ACC.svg?logo=visualstudiocode&style=plastic">
 <!--
-<img src="https://img.shields.io/badge/-Python-FFFF00.svg?logo=python&style=plastic">
-<img src="https://img.shields.io/badge/-Visual%20Studio%20Code-007ACC.svg?logo=visualstudiocode&style=plastic">
+
+
+<img src="https://img.shields.io/badge/-LaTex-000000.svg?logo=LaTex&style=plastic">
 -->
 ここではAtcoderで使うアルゴリズムのコードをまとめて書いてあります。  
 現在入れているアルゴリズム  
