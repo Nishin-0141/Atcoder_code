@@ -1,4 +1,4 @@
-# Atcoder_code <img src="https://img.shields.io/badge/-Python-FFFF00.svg?logo=python&style=plastic"> <img src="https://img.shields.io/badge/-Visual%20Studio%20Code-007ACC.svg?logo=visualstudiocode&style=plastic">
+# Atcoder_code <img src="https://img.shields.io/badge/-Python-FFFF00.svg?logo=python&style=plastic"> <img src="https://img.shields.io/badge/-Rust-000000.svg?logo=rust&style=plastic">  <img src="https://img.shields.io/badge/-Visual%20Studio%20Code-007ACC.svg?logo=visualstudiocode&style=plastic">
 <!--
 
 
