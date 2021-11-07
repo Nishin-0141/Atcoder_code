@@ -1,37 +1,48 @@
-# この Union Find はランクなしの場合
+class UnionFind():
+    def __init__(self, n: int) -> None:
+        self.n = n
+        self.par = [-1]*n
 
-# 木の根を求める
-def root(x: int) -> int:
-    if par[x] == x:             # 根
-        return x
-    else:
-        par[x] = root(par[x])   # 経路圧縮
-        return par[x]
+    def find(self, x: int) -> int:
+        "要素が属する集合の代表を見つけて返す"
+        if self.par[x] < 0:
+            return x
+        else:
+            self.par[x] = self.find(self.par[x])
+            return self.par[x]
 
+    def same(self, x: int, y: int) -> bool:
+        "２つの根が同じかどうかを返す"
+        return self.find(x) == self.find(y)
 
-# x と y が同じ集合に属するかどうか
-def same(x: int, y: int) -> bool:
-    return root(x) == root(y)
+    def union(self, x: int, y: int) -> None:
+        "２つの集合を１つに統合する"
+        x = self.find(x)
+        y = self.find(y)
+        if x == y:
+            return
+        else:
+            if self.par[x] > self.par[y]:
+                x, y = y, x
+            self.par[x] += self.par[y]
+            self.par[y] = x
 
+    def size(self, x: int) -> int:
+        "連結成分の大きさを返す"
+        return -self.par[self.find(x)]
 
-# x と y の属する集合を併合
-def unite(x: int, y: int):
-    x = root(x)
-    y = root(y)
-    if x == y: return
-    par[x] = y
+    def get_par(self):
+        print(self.par)
 
 
 n, q = map(int, input().split())
-par = [i for i in range(n)] # はじめは全部の頂点が根
+num = UnionFind(n)
 for i in range(q):
-    p, a, b = map(int, input().split())
-    a -= 1
-    b -= 1
-    if p == 0:
-        unite(a, b)
+    t, u, v = map(int, input().split())
+    if t == 0:
+        num.union(u, v)
     else:
-        if same(a, b):
-            print('Yes')
+        if num.same(u, v):
+            print(1)
         else:
-            print('No')
+            print(0)
