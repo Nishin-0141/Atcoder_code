@@ -32,6 +32,7 @@ class UnionFind():
         return -self.par[self.find(x)]
 
     def get_par(self):
+        "親が誰かを保存している配列を出力（デバッグ）"
         print(self.par)
 
 
